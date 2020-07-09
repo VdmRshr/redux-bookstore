@@ -30,11 +30,11 @@ const stringMiddleware = (store) => (next) => (action) => {
 
 const store = createStore(reducer,applyMiddleware(thunkMiddleware,stringMiddleware) );
 
-const myAction=(dispatch)=>{
-    setTimeout(()=>dispatch({
-        type: 'DELAYED_ACTION'
-    }), 2000)
-};
-store.dispatch(myAction);
+// const myAction=(dispatch)=>{
+//     setTimeout(()=>dispatch({
+//         type: 'DELAYED_ACTION'
+//     }), 2000)
+// };
+// store.dispatch(myAction);
 
 export default store;
